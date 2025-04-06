@@ -1,4 +1,4 @@
-# HikePlanner
+# HikePlanner Nachbau Jaden Donati (Beispiel von Dozenten )
 
 inspired by https://blog.mimacom.com/data-collection-scrapy-hiketime-prediction/
 similar dataset https://www.kaggle.com/datasets/roccoli/gpx-hike-tracks

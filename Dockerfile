@@ -1,6 +1,6 @@
 # Usage
 # docker build -t mosazhaw/hikeplanner .
-# docker run --name hikeplanner -e AZURE_STORAGE_CONNECTION_STRING='***' -p 9001:80 -d mosazhaw/hikeplanner
+# docker run --name hikeplanner -e AZURE_STORAGE_CONNECTION_STRING='***' -p 9001:80 -d okita112/hikeplanner
 
 FROM python:3.13.0
 
@@ -8,6 +8,7 @@ FROM python:3.13.0
 WORKDIR /usr/src/app
 COPY backend/app.py backend/app.py
 COPY frontend/build frontend/build
+COPY model/GradientBoostingRegressor.pkl model/GradientBoostingRegressor.pkl
 
 # Install
 COPY requirements.txt requirements.txt
