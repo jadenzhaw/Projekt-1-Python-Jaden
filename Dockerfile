@@ -8,7 +8,7 @@ FROM python:3.13.0
 WORKDIR /usr/src/app
 COPY backend/app.py backend/app.py
 COPY frontend/build frontend/build
-COPY model/GradientBoostingRegressor.pkl model/GradientBoostingRegressor.pkl
+
 
 # Install
 COPY requirements.txt requirements.txt

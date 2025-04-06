@@ -33,8 +33,8 @@ if 'AZURE_STORAGE_CONNECTION_STRING' in os.environ:
     blob_name = next(blob.name for blob in blob_list)
 
     # Download the blob to a local file
-    Path("../model").mkdir(parents=True, exist_ok=True)
-    download_file_path = os.path.join("../model", "GradientBoostingRegressor.pkl")
+    Path("model").mkdir(parents=True, exist_ok=True)
+    download_file_path = os.path.join("model", "GradientBoostingRegressor.pkl")
     print(f"downloading blob to {download_file_path}")
 
     with open(file=download_file_path, mode="wb") as download_file:
@@ -44,7 +44,7 @@ else:
     print("CANNOT ACCESS AZURE BLOB STORAGE - Please set AZURE_STORAGE_CONNECTION_STRING. Current env: ")
     print(os.environ)
 
-file_path = Path(".", "../model/", "GradientBoostingRegressor.pkl")
+file_path = Path("model", "GradientBoostingRegressor.pkl")
 with open(file_path, 'rb') as fid:
     model = pickle.load(fid)
 
